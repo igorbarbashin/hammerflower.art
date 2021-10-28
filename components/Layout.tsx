@@ -2,7 +2,7 @@
 // Background
 
 import styled from '@emotion/styled';
-import Logo from '../images/logo';
+import Logo from '../images/Logo';
 
 // Basic styling
 const Wrap = styled.div`
