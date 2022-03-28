@@ -1,69 +1,30 @@
 import styled from '@emotion/styled';
-import React from 'react';
-import FeaturedFlower from '../components/FeaturedFlower';
-import Layout from '../components/Layout';
-import SeasonProgress from '../components/SeasonProgress';
-import normalizeFlowers from '../lib/normalizeFlowers';
-import { getDatabase, getSeason } from '../lib/notion';
 
-const H1 = styled.h1``;
-const Heading = styled.div`
-  margin-bottom: 5em;
+const Wrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
 `;
-const Intro = styled.div``;
 
-// Tooltip? Maybe not
+const Manifest = styled.p`
+  max-width: 50em;
+`;
 
-// intro text
-// Season progress
-// Opensea button
-// Value component
-// Copy
-// Season dates
-// Where is the copy? In the notebook
-// Can we specify a query?
-
-function Home({ season, todayFlower }) {
-  if (!season) {
-    return 'loading';
-  }
+function Home() {
   return (
-    <Layout>
-      <Intro></Intro>
-      <Heading>
-        <H1>Season II</H1>
-        <div>Oct 26 – Nov 30</div>
-      </Heading>
-      <FeaturedFlower flower={todayFlower} />
-
-      <SeasonProgress season={season} />
-    </Layout>
+    <Wrap>
+      <h1>HammerFlower</h1>
+      <Manifest>
+        HammerFlower is an underground open community of rebels against all
+        bullshit of the world that divides us. It sprung up as a response to
+        conflicts among Ukrainian, Russian and Belarusian leadership. We
+        celebrate unity of our Slavic roots through art, music and events.
+      </Manifest>
+    </Wrap>
   );
 }
-
-export const getStaticProps = async () => {
-  const season1 = await getSeason('I');
-
-  // const season2 = allFlowers
-  //   .filter((flower) => flower.season === 'II')
-  //   .sort((a, b) => a.serial - b.serial);
-
-  // const season1 = allFlowers
-  //   .filter((flower) => flower.season === 'I')
-  //   .sort((a, b) => a.serial - b.serial);
-  const listedFlowers = season1.filter((flower) => !!flower.opensea);
-  const todayFlower = listedFlowers[listedFlowers.length - 1] || {};
-  // console.log({ todayFlower });
-
-  // console.log({ season1 });
-
-  return {
-    props: {
-      todayFlower,
-      season: season1,
-    },
-    revalidate: 1,
-  };
-};
 
 export default Home;

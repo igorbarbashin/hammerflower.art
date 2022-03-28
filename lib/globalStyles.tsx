@@ -5,10 +5,8 @@ export const globalStyles = (
     styles={css`
       html,
       body {
-        padding: 3rem 1rem;
         margin: 0;
         background: #f1f2ef;
-        min-height: 100%;
         font-family: 'Montserrat', Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 500;
