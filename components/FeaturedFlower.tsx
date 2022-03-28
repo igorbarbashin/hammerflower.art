@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import { Flower } from '../types/Flower';
 import Button from './Button';
 
 const Wrap = styled.div`

@@ -1,4 +1,4 @@
-type Flower = {
+export type Flower = {
   image: string;
   title: string;
   description: string;

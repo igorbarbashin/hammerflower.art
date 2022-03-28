@@ -1,3 +1,4 @@
+import { Flower } from '../types/Flower';
 import get from './get';
 
 export default function normalizeFlowers(pageData): Flower {

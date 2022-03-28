@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Flower } from '../types/Flower';
 
 // Three backgrounds
 // Popups? Date, Rarity, Pricing, Sale type
