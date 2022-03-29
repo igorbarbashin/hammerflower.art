@@ -17,12 +17,7 @@ function Home() {
   return (
     <Wrap>
       <h1>HammerFlower</h1>
-      <Manifest>
-        HammerFlower is an underground open community of rebels against all
-        bullshit of the world that divides us. It sprung up as a response to
-        conflicts among Ukrainian, Russian and Belarusian leadership. We
-        celebrate unity of our Slavic roots through art, music and events.
-      </Manifest>
+      <Manifest>The Anti-Bullshit Movement</Manifest>
     </Wrap>
   );
 }
