@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import IconInstagram from '../images/IconInstagram';
+import IconTiktok from '../images/IconTiktok';
+import IconYoutube from '../images/IconYoutube';
 import Logo from '../images/Logo';
 
 const Wrap = styled.div`
@@ -13,6 +16,10 @@ const Wrap = styled.div`
 const Manifest = styled.p`
   max-width: 50em;
   margin-bottom: 5em;
+`;
+
+const Content = styled.div`
+  margin: 4em 0;
 `;
 
 const Link = styled.a`
@@ -31,16 +38,64 @@ const SignupForm = styled.iframe`
   border: none;
 `;
 
+const Button = styled.button`
+  padding: 15px 25px;
+  font-size: 20px;
+  background: pink;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: inherit;
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+`;
+
+const SocialLink = styled.a`
+  opacity: 0.5;
+  padding: 10px;
+  :hover {
+    opacity: 1;
+  }
+  svg {
+    max-width: 50px;
+  }
+`;
+
 function Home() {
   return (
     <Wrap>
       <Logo />
 
-      <h2>
-        <a href="https://www.google.ca/maps/place/49%C2%B004'33.5%22N+121%C2%B048'55.7%22W/@49.0757355,-121.8159795,333m/data=!3m1!1e3!4m14!1m7!3m6!1s0x548467bf1af30fa3:0x7a26e1f8fb9df0ec!2sSlesse+Crk!3b1!8m2!3d49.038746!4d-121.6615145!3m5!1s0x0:0x8745062192215fb4!7e2!8m2!3d49.0759722!4d-121.8154722">
-          Camping Location
-        </a>
-      </h2>
+      <Content>
+        <Button
+          onClick={() => {
+            window.location.href =
+              'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+          }}
+        >
+          Download Free Guide
+        </Button>
+      </Content>
+
+      <SocialLinks>
+        <SocialLink target="_blank" href="https://www.tiktok.com/@hammerflower">
+          <IconTiktok />
+        </SocialLink>
+        <SocialLink
+          target="_blank"
+          href="https://www.instagram.com/hammerflower"
+        >
+          <IconInstagram />
+        </SocialLink>
+        <SocialLink
+          target="_blank"
+          href="https://www.youtube.com/channel/UCb--RJt6k6upXJ3XV6syqtw"
+        >
+          <IconYoutube />
+        </SocialLink>
+      </SocialLinks>
     </Wrap>
   );
 }

@@ -7,7 +7,7 @@ export const globalStyles = (
       body {
         margin: 0;
         background: #f1f2ef;
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-family: 'Philosopher', Helvetica, Arial, sans-serif;
         font-size: 14px;
         font-weight: 500;
       }
