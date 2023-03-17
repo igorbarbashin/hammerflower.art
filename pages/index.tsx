@@ -91,18 +91,45 @@ function Home() {
       </Content>
 
       <SocialLinks>
-        <SocialLink target="_blank" href="https://www.tiktok.com/@hammerflower">
+        <SocialLink
+          target="_blank"
+          onClick={() => {
+            gtag.event({
+              action: 'click',
+              category: 'Social Media',
+              label: 'TikTok',
+              value: 1,
+            });
+          }}
+          href="https://www.tiktok.com/@hammerflower"
+        >
           <IconTiktok />
         </SocialLink>
         <SocialLink
           target="_blank"
           href="https://www.instagram.com/hammerflower"
+          onClick={() => {
+            gtag.event({
+              action: 'click',
+              category: 'Social Media',
+              label: 'Instagram',
+              value: 1,
+            });
+          }}
         >
           <IconInstagram />
         </SocialLink>
         <SocialLink
           target="_blank"
           href="https://www.youtube.com/channel/UCb--RJt6k6upXJ3XV6syqtw"
+          onClick={() => {
+            gtag.event({
+              action: 'click',
+              category: 'Social Media',
+              label: 'YouTube',
+              value: 1,
+            });
+          }}
         >
           <IconYoutube />
         </SocialLink>
