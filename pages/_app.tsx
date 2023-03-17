@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }) => (
         crossOrigin="crossorigin"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Philosopher:wght@500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap"
         rel="stylesheet"
       />
     </Head>
