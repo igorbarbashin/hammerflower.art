@@ -79,8 +79,11 @@ function Home() {
               label: 'Free Guide',
               value: 1,
             });
-            window.location.href =
-              'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+
+            setTimeout(() => {
+              window.location.href =
+                'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+            }, 500);
           }}
         >
           Download Free Guide
