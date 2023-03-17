@@ -3,6 +3,7 @@ import IconInstagram from '../images/IconInstagram';
 import IconTiktok from '../images/IconTiktok';
 import IconYoutube from '../images/IconYoutube';
 import Logo from '../images/Logo';
+import * as gtag from '../lib/gtag';
 
 const Wrap = styled.div`
   display: flex;
@@ -46,6 +47,7 @@ const Button = styled.button`
   border-radius: 100px;
   cursor: pointer;
   font-family: inherit;
+  color: black;
 `;
 
 const SocialLinks = styled.div`
@@ -71,6 +73,12 @@ function Home() {
       <Content>
         <Button
           onClick={() => {
+            gtag.event({
+              action: 'download',
+              category: 'PDF',
+              label: 'Free Guide',
+              value: 1,
+            });
             window.location.href =
               'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
           }}
