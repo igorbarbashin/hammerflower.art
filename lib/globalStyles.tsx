@@ -21,10 +21,7 @@ export const globalStyles = (
       h3,
       h4 {
         font-family: 'Forum', 'Times New Roman', serif;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
         font-weight: normal;
-        font-size: 30px;
         margin-bottom: 0;
       }
 

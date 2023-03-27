@@ -14,11 +14,6 @@ const Wrap = styled.div`
   flex-direction: column;
 `;
 
-const Manifest = styled.p`
-  max-width: 50em;
-  margin-bottom: 5em;
-`;
-
 const Content = styled.div`
   margin: 4em 0;
 `;
@@ -65,6 +60,38 @@ const SocialLink = styled.a`
   }
 `;
 
+const RecommendedProducts = styled.div``;
+
+const Title = styled.h2``;
+
+const Product = styled.a`
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.2em;
+  width: 17em;
+  align-items: center;
+`;
+
+const ProductImage = styled.img`
+  display: block;
+  margin-right: 1em;
+  width: 70px;
+  min-height: 70px;
+  object-fit: contain;
+  background: white;
+`;
+
+const ProductInfo = styled.div``;
+const AmazonIcon = styled.img`
+  display: block;
+  width: 22px;
+  height: 20px;
+  margin-top: 0.5em;
+`;
+
 function Home() {
   return (
     <Wrap>
@@ -89,6 +116,27 @@ function Home() {
           Download Free Guide
         </Button>
       </Content>
+
+      <Title>Recommended products:</Title>
+      <RecommendedProducts>
+        <Product href="https://amzn.to/40EfPzi">
+          <ProductImage src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71-Ub8a-PHL._AC_SY879_.jpg" />
+          <ProductInfo>
+            Strathmore 140&nbsp;lb Watercolor Paper
+            <AmazonIcon src="/amazon-icon.png" />
+          </ProductInfo>
+        </Product>
+        <Product href="https://amzn.to/42J1Dqh">
+          <ProductImage
+            style={{ padding: 10 }}
+            src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/61aKrv6NzBL._AC_SX679_.jpg"
+          />
+          <ProductInfo>
+            Craftsman Hammer
+            <AmazonIcon src="/amazon-icon.png" />
+          </ProductInfo>
+        </Product>
+      </RecommendedProducts>
 
       <SocialLinks>
         <SocialLink

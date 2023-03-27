@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 const SVG = styled.svg`
   max-width: 100px;
   min-width: 50px;
-  height: 200px;
+  height: 100px;
+  margin-top: 30px;
 `;
 
 function Logo() {
