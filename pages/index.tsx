@@ -119,14 +119,14 @@ function Home() {
 
       <Title>Recommended products:</Title>
       <RecommendedProducts>
-        <Product href="https://amzn.to/40EfPzi">
+        <Product href="https://amzn.to/40BeKYL">
           <ProductImage src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71-Ub8a-PHL._AC_SY879_.jpg" />
           <ProductInfo>
             Strathmore 140&nbsp;lb Watercolor Paper
             <AmazonIcon src="/amazon-icon.png" />
           </ProductInfo>
         </Product>
-        <Product href="https://amzn.to/42J1Dqh">
+        <Product href="https://amzn.to/3lKksZG">
           <ProductImage
             style={{ padding: 10 }}
             src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/61aKrv6NzBL._AC_SX679_.jpg"
