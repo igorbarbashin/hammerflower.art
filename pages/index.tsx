@@ -117,7 +117,7 @@ function Home() {
         </Button>
       </Content>
 
-      <Title>Recommended products:</Title>
+      {/* <Title>Recommended products:</Title>
       <RecommendedProducts>
         <Product href="https://amzn.to/40BeKYL">
           <ProductImage src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71-Ub8a-PHL._AC_SY879_.jpg" />
@@ -136,7 +136,7 @@ function Home() {
             <AmazonIcon src="/amazon-icon.png" />
           </ProductInfo>
         </Product>
-      </RecommendedProducts>
+      </RecommendedProducts> */}
 
       <SocialLinks>
         <SocialLink
