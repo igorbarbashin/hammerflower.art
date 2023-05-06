@@ -4,6 +4,7 @@ import IconTiktok from '../images/IconTiktok';
 import IconYoutube from '../images/IconYoutube';
 import Logo from '../images/Logo';
 import * as gtag from '../lib/gtag';
+import EventList from '../components/EventList';
 
 const Wrap = styled.div`
   display: flex;
@@ -92,6 +93,13 @@ const AmazonIcon = styled.img`
   margin-top: 0.5em;
 `;
 
+const WorkshopsWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+`;
+
 function Home() {
   return (
     <Wrap>
@@ -110,11 +118,31 @@ function Home() {
             setTimeout(() => {
               window.location.href =
                 'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
-            }, 500);
+            }, 0);
           }}
         >
           Download Free Guide
         </Button>
+
+        <WorkshopsWrap>
+          <Button
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Link',
+                label: 'Workshops',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href =
+                  'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
+              }, 0);
+            }}
+          >
+            Workshops
+          </Button>
+        </WorkshopsWrap>
       </Content>
 
       {/* <Title>Recommended products:</Title>
@@ -137,6 +165,8 @@ function Home() {
           </ProductInfo>
         </Product>
       </RecommendedProducts> */}
+
+      {/* <EventList></EventList> */}
 
       <SocialLinks>
         <SocialLink
