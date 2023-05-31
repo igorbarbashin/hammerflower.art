@@ -136,6 +136,8 @@ function Home() {
 
               setTimeout(() => {
                 window.location.href =
+                  // 'https://www.eventbrite.com/o/hammerflower-63675539363#events';
+                  // Mail list
                   'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
               }, 0);
             }}
