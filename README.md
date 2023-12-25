@@ -1,0 +1,3 @@
+# Deployment
+
+`vercel --prod`

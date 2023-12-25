@@ -100,13 +100,25 @@ const WorkshopsWrap = styled.div`
   margin-top: 2em;
 `;
 
+/* TODO
+- Combine video. 
+- Upload to youtube as unlisted
+- Add a youtube embed
+- Add a tip button
+- Add referral links to amazon
+- Resubmit referral program to amazon
+- Add favicon. Use the profile pic
+- Add proper title and description for the page
+- Add a page for the guide. Or do it on the same page?
+*/
+
 function Home() {
   return (
     <Wrap>
       <Logo />
 
       <Content>
-        <Button
+        {/* <Button
           onClick={() => {
             gtag.event({
               action: 'download',
@@ -122,7 +134,7 @@ function Home() {
           }}
         >
           Download Free Guide
-        </Button>
+        </Button> */}
 
         <WorkshopsWrap>
           <Button
