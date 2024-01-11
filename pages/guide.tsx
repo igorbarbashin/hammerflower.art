@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import * as gtag from '../lib/gtag';
 
 const DecorationWrap = styled.div`
   background: url('/images/guide-top-decoration.jpg') no-repeat top right;
@@ -237,6 +238,30 @@ function Guide() {
         <a href="https://paypal.me/hammerflower">
           https://paypal.me/hammerflower
         </a>
+
+        <Section style={{ marginTop: 50 }}>
+          If you prefer a printable version of this guide, you can download
+          it&nbsp;
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link"
+            onClick={() => {
+              gtag.event({
+                action: 'download',
+                category: 'PDF',
+                label: 'Free Guide',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href =
+                  'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+              }, 0);
+            }}
+          >
+            here
+          </a>
+        </Section>
 
         <Disclaimer>
           <p>

@@ -53,6 +53,22 @@ const Button = styled.button`
   }
 `;
 
+const ButtonLink = styled.a`
+  padding: 15px 25px;
+  font-size: 20px;
+  background: pink;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: inherit;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    background: #ffcfd7;
+  }
+`;
+
 const SocialLinks = styled.div`
   display: flex;
 `;
@@ -107,8 +123,13 @@ const WorkshopsWrap = styled.div`
   margin-top: 2em;
 `;
 
-const WorkshopRegister = styled.div`
+const CenterButton = styled.div`
   margin: 1em auto 3em;
+  text-align: center;
+`;
+
+const FreeGuideButtonWrap = styled.div`
+  margin: 2em auto 1em;
   text-align: center;
 `;
 
@@ -168,7 +189,7 @@ function Home() {
               required!
             </p>
 
-            <WorkshopRegister>
+            <CenterButton>
               <Button
                 onClick={() => {
                   gtag.event({
@@ -186,7 +207,7 @@ function Home() {
               >
                 Register Now
               </Button>
-            </WorkshopRegister>
+            </CenterButton>
           </article>
 
           <div>
@@ -249,7 +270,7 @@ function Home() {
         </Video>
 
         <Block>
-          <h2>Free printable guide</h2>
+          <h2>Free guide</h2>
 
           <p>
             Grab your free printable guide to enhance your hammering skills!
@@ -258,25 +279,9 @@ function Home() {
             download and start your creative journey!
           </p>
 
-          <a
-            target="_blank"
-            href="https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link"
-            onClick={() => {
-              gtag.event({
-                action: 'download',
-                category: 'PDF',
-                label: 'Free Guide',
-                value: 1,
-              });
-
-              setTimeout(() => {
-                window.location.href =
-                  'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
-              }, 0);
-            }}
-          >
-            Download PDF
-          </a>
+          <FreeGuideButtonWrap>
+            <ButtonLink href="/guide">Free Guide</ButtonLink>
+          </FreeGuideButtonWrap>
         </Block>
 
         {/* <Button
