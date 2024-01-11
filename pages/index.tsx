@@ -158,6 +158,13 @@ const Block = styled.div`
   border-radius: 5px;
 `;
 
+const Disclaimer = styled.div`
+  margin-top: 40px;
+  font-size: 0.8em;
+  font-style: italic;
+  max-width: 30em;
+`;
+
 /* TODO
 - Upload to youtube as unlisted
 - Add a youtube embed
@@ -325,26 +332,25 @@ function Home() {
         </WorkshopsWrap> */}
       </Content>
 
-      {/* <Title>Recommended products:</Title>
-      <RecommendedProducts>
-        <Product href="https://amzn.to/40BeKYL">
-          <ProductImage src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71-Ub8a-PHL._AC_SY879_.jpg" />
-          <ProductInfo>
-            Strathmore 140&nbsp;lb Watercolor Paper
-            <AmazonIcon src="/amazon-icon.png" />
-          </ProductInfo>
-        </Product>
-        <Product href="https://amzn.to/3lKksZG">
-          <ProductImage
-            style={{ padding: 10 }}
-            src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/61aKrv6NzBL._AC_SX679_.jpg"
-          />
-          <ProductInfo>
-            Craftsman Hammer
-            <AmazonIcon src="/amazon-icon.png" />
-          </ProductInfo>
-        </Product>
-      </RecommendedProducts> */}
+      <Block>
+        <Title>Recommended products:</Title>
+        <RecommendedProducts>
+          <Product href="https://amzn.to/3tW0Y8n">
+            <ProductImage src="/images/paper.jpg" />
+            <ProductInfo>
+              Strathmore 140&nbsp;lb Watercolor Paper
+              <AmazonIcon src="/amazon-icon.png" />
+            </ProductInfo>
+          </Product>
+          <Product href="https://amzn.to/3O0oxE9">
+            <ProductImage style={{ padding: 10 }} src="/images/hammer.jpg" />
+            <ProductInfo>
+              Edward Tools Harden 8oz Hammer
+              <AmazonIcon src="/amazon-icon.png" />
+            </ProductInfo>
+          </Product>
+        </RecommendedProducts>
+      </Block>
 
       {/* <EventList></EventList> */}
 
@@ -392,6 +398,15 @@ function Home() {
           <IconYoutube />
         </SocialLink>
       </SocialLinks>
+
+      <Disclaimer>
+        <p>
+          Our website participates in the Amazon Services LLC Associates
+          Program, an affiliate advertising program designed to provide a means
+          for us to earn fees by linking to Amazon.com and affiliated sites, at
+          no extra cost to you.
+        </p>
+      </Disclaimer>
     </Wrap>
   );
 }
