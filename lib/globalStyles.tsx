@@ -8,7 +8,7 @@ export const globalStyles = (
         margin: 0;
         background: #f1f2ef;
         font-family: 'Philosopher', Helvetica, Arial, sans-serif;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
       }
 
@@ -22,7 +22,7 @@ export const globalStyles = (
       h4 {
         font-family: 'Forum', 'Times New Roman', serif;
         font-weight: normal;
-        margin-bottom: 0;
+        margin-top: 0;
       }
 
       img {

@@ -5,6 +5,8 @@ const SVG = styled.svg`
   min-width: 50px;
   height: 100px;
   margin-top: 30px;
+  width: 20%;
+  height: 20%;
 `;
 
 function Logo() {

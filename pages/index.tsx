@@ -16,7 +16,10 @@ const Wrap = styled.div`
 `;
 
 const Content = styled.div`
-  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 `;
 
 const Link = styled.a`
@@ -44,6 +47,10 @@ const Button = styled.button`
   cursor: pointer;
   font-family: inherit;
   color: black;
+
+  &:hover {
+    background: #ffcfd7;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -100,8 +107,37 @@ const WorkshopsWrap = styled.div`
   margin-top: 2em;
 `;
 
+const WorkshopRegister = styled.div`
+  margin: 1em auto 3em;
+  text-align: center;
+`;
+
+const Video = styled.div`
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  iframe {
+    max-width: 100%;
+  }
+`;
+
+const TipBlurb = styled.div`
+  padding: 20px;
+  max-width: 30em;
+`;
+
+const Block = styled.div`
+  max-width: 30em;
+  margin: 0 20px;
+  margin-bottom: 2em;
+  background: white;
+  padding: 2em;
+  border-radius: 5px;
+`;
+
 /* TODO
-- Combine video. 
 - Upload to youtube as unlisted
 - Add a youtube embed
 - Add a tip button
@@ -118,6 +154,131 @@ function Home() {
       <Logo />
 
       <Content>
+        <Block>
+          <h2>Workshops</h2>
+
+          <article>
+            <h3>How to Hammer Flowers</h3>
+            <time dateTime="2024-01-25T11:00">
+              January 25, 2024 at 11:00 AM
+            </time>
+            <p>
+              Join us for an interactive workshop where you'll learn the art of
+              hammering flowers to create beautiful designs. No prior experience
+              required!
+            </p>
+
+            <WorkshopRegister>
+              <Button
+                onClick={() => {
+                  gtag.event({
+                    action: 'click',
+                    category: 'Link',
+                    label: 'Workshops',
+                    value: 1,
+                  });
+
+                  setTimeout(() => {
+                    window.location.href =
+                      'https://www.eventbrite.com/e/how-to-hammer-flowers-tickets-793672544947';
+                  }, 0);
+                }}
+              >
+                Register Now
+              </Button>
+            </WorkshopRegister>
+          </article>
+
+          <div>
+            <a
+              onClick={() => {
+                gtag.event({
+                  action: 'click',
+                  category: 'Link',
+                  label: 'Workshops',
+                  value: 1,
+                });
+
+                setTimeout(() => {
+                  window.location.href =
+                    // 'https://www.eventbrite.com/o/hammerflower-63675539363#events';
+                    // Mail list
+                    'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
+                }, 0);
+              }}
+              href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop"
+            >
+              Subscribe to our mailing list
+            </a>
+          </div>
+        </Block>
+
+        <Video>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/GVJZADFocbE?si=MVcsjs5Ud5JIoLQ2"
+            title="YouTube video player"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+
+          <TipBlurb>
+            Enjoy our free basic flower hammering tutorial! If you like it,
+            consider a tip to help produce more quality content in the future.
+            Click below to support. Thank you!
+          </TipBlurb>
+
+          <Button
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Link',
+                label: 'Tip',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href = 'https://paypal.me/hammerflower';
+              }, 0);
+            }}
+          >
+            Leave a Tip ❤️
+          </Button>
+        </Video>
+
+        <Block>
+          <h2>Free printable guide</h2>
+
+          <p>
+            Grab your free printable guide to enhance your hammering skills!
+            It's a perfect resource for beginners. If you find it helpful, feel
+            free to leave a tip to support future content. Click below to
+            download and start your creative journey!
+          </p>
+
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link"
+            onClick={() => {
+              gtag.event({
+                action: 'download',
+                category: 'PDF',
+                label: 'Free Guide',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href =
+                  'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+              }, 0);
+            }}
+          >
+            Download PDF
+          </a>
+        </Block>
+
         {/* <Button
           onClick={() => {
             gtag.event({
@@ -133,10 +294,10 @@ function Home() {
             }, 0);
           }}
         >
-          Download Free Guide
+          Download Free Guide PDF
         </Button> */}
 
-        <WorkshopsWrap>
+        {/* <WorkshopsWrap>
           <Button
             onClick={() => {
               gtag.event({
@@ -156,7 +317,7 @@ function Home() {
           >
             Workshops
           </Button>
-        </WorkshopsWrap>
+        </WorkshopsWrap> */}
       </Content>
 
       {/* <Title>Recommended products:</Title>
