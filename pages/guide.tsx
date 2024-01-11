@@ -279,7 +279,7 @@ function Guide() {
           it&nbsp;
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link"
+            href="https://drive.google.com/file/d/1ZJBLJifLqP6xMQyDJ15PWyKWk75dTLfa/view"
             onClick={() => {
               gtag.event({
                 action: 'download',
@@ -290,7 +290,7 @@ function Guide() {
 
               setTimeout(() => {
                 window.location.href =
-                  'https://drive.google.com/file/d/1Tlp-Laf8J5moCP3sgvoiMOfrBiDXJD-l/view?usp=share_link';
+                  'https://drive.google.com/file/d/1ZJBLJifLqP6xMQyDJ15PWyKWk75dTLfa/view';
               }, 0);
             }}
           >
