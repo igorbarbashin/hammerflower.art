@@ -129,7 +129,7 @@ function Guide() {
           <h2>All you need is</h2>
 
           <Product>
-            <a href="https://a.co/d/3R8glK6">
+            <a href="https://amzn.to/3O0oxE9">
               <ProductImage>
                 <img src="/images/hammer.jpg" />
               </ProductImage>
@@ -144,7 +144,7 @@ function Guide() {
               </p>
               <p>
                 Need a hammer?{' '}
-                <a href="https://a.co/d/3R8glK6">
+                <a href="https://amzn.to/3O0oxE9">
                   Check out this durable and reliable hammer on Amazon
                 </a>
               </p>
@@ -167,7 +167,7 @@ function Guide() {
           </Product>
 
           <Product>
-            <a href="https://amzn.to/40m7iRQ">
+            <a href="https://amzn.to/3tW0Y8n">
               <ProductImage>
                 <img src="/images/paper.jpg" />
               </ProductImage>
@@ -180,7 +180,7 @@ function Guide() {
               </p>
               <p>
                 I usually get my favorite{' '}
-                <a href="https://amzn.to/40m7iRQ">
+                <a href="https://amzn.to/3tW0Y8n">
                   140lb watercolor paper from Amazon
                 </a>
               </p>
