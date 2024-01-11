@@ -69,6 +69,26 @@ const ProductImage = styled.div`
   }
 `;
 
+const CenterButton = styled.div`
+  margin: 1em auto 3em;
+  text-align: center;
+`;
+
+const Button = styled.button`
+  padding: 15px 25px;
+  font-size: 20px;
+  background: pink;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: inherit;
+  color: black;
+
+  &:hover {
+    background: #ffcfd7;
+  }
+`;
+
 const ProductDescription = styled.div``;
 
 const Step = styled.div`
@@ -235,9 +255,24 @@ function Guide() {
           like this. Thank you for your support!
         </p>
 
-        <a href="https://paypal.me/hammerflower">
-          https://paypal.me/hammerflower
-        </a>
+        <CenterButton>
+          <Button
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Link',
+                label: 'Tip',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href = 'https://paypal.me/hammerflower';
+              }, 0);
+            }}
+          >
+            Leave a Tip ❤️
+          </Button>
+        </CenterButton>
 
         <Section style={{ marginTop: 50 }}>
           If you prefer a printable version of this guide, you can download
