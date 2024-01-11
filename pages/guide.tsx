@@ -15,7 +15,6 @@ const Wrap = styled.div`
   max-width: 30em;
   margin: 0 auto;
   padding: 10px;
-  /* background: white; */
 `;
 
 const Section = styled.section`
