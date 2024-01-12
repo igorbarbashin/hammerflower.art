@@ -197,7 +197,7 @@ function Home() {
             </p>
 
             <CenterButton>
-              <ButtonLink
+              {/* <ButtonLink
                 href="https://www.eventbrite.com/e/how-to-hammer-flowers-tickets-793672544947"
                 onClick={() => {
                   gtag.event({
@@ -214,12 +214,17 @@ function Home() {
                 }}
               >
                 Register Now
-              </ButtonLink>
+              </ButtonLink> */}
+              <i>Sold out</i>
             </CenterButton>
           </article>
 
-          <div>
-            <a
+          <p>
+            Join our mailing list to be notified of future workshops and events!
+          </p>
+
+          <CenterButton>
+            <ButtonLink
               onClick={() => {
                 gtag.event({
                   action: 'click',
@@ -237,9 +242,9 @@ function Home() {
               }}
               href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop"
             >
-              Subscribe to our mailing list
-            </a>
-          </div>
+              Subscribe
+            </ButtonLink>
+          </CenterButton>
         </Block>
 
         <Video>
@@ -283,8 +288,7 @@ function Home() {
           <p>
             Grab your free printable guide to enhance your hammering skills!
             It's a perfect resource for beginners. If you find it helpful, feel
-            free to leave a tip to support future content. Click below to
-            download and start your creative journey!
+            free to leave a tip to support future content. <nobr>🔨🌸</nobr>
           </p>
 
           <FreeGuideButtonWrap>
