@@ -288,7 +288,7 @@ function Home() {
           <p>
             Grab your free printable guide to enhance your hammering skills!
             It's a perfect resource for beginners. If you find it helpful, feel
-            free to leave a tip to support future content. <nobr>🔨🌸</nobr>
+            free to leave a tip to support future content.
           </p>
 
           <FreeGuideButtonWrap>
