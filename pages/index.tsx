@@ -197,7 +197,8 @@ function Home() {
             </p>
 
             <CenterButton>
-              <Button
+              <ButtonLink
+                href="https://www.eventbrite.com/e/how-to-hammer-flowers-tickets-793672544947"
                 onClick={() => {
                   gtag.event({
                     action: 'click',
@@ -213,7 +214,7 @@ function Home() {
                 }}
               >
                 Register Now
-              </Button>
+              </ButtonLink>
             </CenterButton>
           </article>
 
