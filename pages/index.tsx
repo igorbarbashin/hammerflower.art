@@ -182,6 +182,55 @@ function Home() {
       <Logo />
 
       <Content>
+        <Video>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/GVJZADFocbE?si=MVcsjs5Ud5JIoLQ2"
+            title="YouTube video player"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+
+          <TipBlurb>
+            Enjoy our free basic flower hammering tutorial! If you like it,
+            consider a tip to help produce more quality content in the future.
+            Click below to support. Thank you!
+          </TipBlurb>
+
+          <Button
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Link',
+                label: 'Tip',
+                value: 1,
+              });
+
+              setTimeout(() => {
+                window.location.href = 'https://paypal.me/hammerflower';
+              }, 0);
+            }}
+          >
+            Leave a Tip ❤️
+          </Button>
+        </Video>
+
+        <Block>
+          <h2>Free guide</h2>
+
+          <p>
+            Grab your free printable guide to enhance your hammering skills!
+            It's a perfect resource for beginners. If you find it helpful, feel
+            free to leave a tip to support future content.
+          </p>
+
+          <FreeGuideButtonWrap>
+            <ButtonLink href="/guide">Free Guide</ButtonLink>
+          </FreeGuideButtonWrap>
+        </Block>
+
         <Block>
           <h2>Workshops</h2>
 
@@ -245,55 +294,6 @@ function Home() {
               Subscribe
             </ButtonLink>
           </CenterButton>
-        </Block>
-
-        <Video>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/GVJZADFocbE?si=MVcsjs5Ud5JIoLQ2"
-            title="YouTube video player"
-            frameBorder={0}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-
-          <TipBlurb>
-            Enjoy our free basic flower hammering tutorial! If you like it,
-            consider a tip to help produce more quality content in the future.
-            Click below to support. Thank you!
-          </TipBlurb>
-
-          <Button
-            onClick={() => {
-              gtag.event({
-                action: 'click',
-                category: 'Link',
-                label: 'Tip',
-                value: 1,
-              });
-
-              setTimeout(() => {
-                window.location.href = 'https://paypal.me/hammerflower';
-              }, 0);
-            }}
-          >
-            Leave a Tip ❤️
-          </Button>
-        </Video>
-
-        <Block>
-          <h2>Free guide</h2>
-
-          <p>
-            Grab your free printable guide to enhance your hammering skills!
-            It's a perfect resource for beginners. If you find it helpful, feel
-            free to leave a tip to support future content.
-          </p>
-
-          <FreeGuideButtonWrap>
-            <ButtonLink href="/guide">Free Guide</ButtonLink>
-          </FreeGuideButtonWrap>
         </Block>
 
         {/* <Button
