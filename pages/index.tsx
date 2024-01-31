@@ -182,6 +182,74 @@ function Home() {
       <Logo />
 
       <Content>
+        <Block>
+          <h2>Workshops</h2>
+
+          <article>
+            <h3>Hammering Flowers on Paper</h3>
+            <time dateTime="2024-01-25T11:00">
+              February 15, 2024 at 11:00 AM PST
+            </time>
+            <p>
+              Join us for an interactive workshop where you'll learn the art of
+              hammering flowers to create beautiful designs. No prior experience
+              required!
+            </p>
+
+            <CenterButton>
+              <ButtonLink
+                href="https://www.eventbrite.com/e/hammering-flowers-on-paper-tickets-816057559127"
+                onClick={() => {
+                  gtag.event({
+                    action: 'workshop click',
+                    category: 'Link',
+                    label: 'Workshops',
+                    value: 1,
+                  });
+
+                  setTimeout(() => {
+                    window.location.href =
+                      'https://www.eventbrite.com/e/hammering-flowers-on-paper-tickets-816057559127';
+                  }, 0);
+                }}
+              >
+                Register Now
+              </ButtonLink>
+              {/* <i>Sold out</i> */}
+            </CenterButton>
+          </article>
+
+          <p>
+            <a href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop">
+              Join our mailing list
+            </a>{' '}
+            to be notified of future workshops and events!
+          </p>
+
+          {/* <CenterButton>
+            <ButtonLink
+              onClick={() => {
+                gtag.event({
+                  action: 'click',
+                  category: 'Link',
+                  label: 'Workshops',
+                  value: 1,
+                });
+
+                setTimeout(() => {
+                  window.location.href =
+                    // 'https://www.eventbrite.com/o/hammerflower-63675539363#events';
+                    // Mail list
+                    'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
+                }, 0);
+              }}
+              href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop"
+            >
+              Subscribe
+            </ButtonLink>
+          </CenterButton> */}
+        </Block>
+
         <Video>
           <iframe
             width="560"
@@ -229,71 +297,6 @@ function Home() {
           <FreeGuideButtonWrap>
             <ButtonLink href="/guide">Free Guide</ButtonLink>
           </FreeGuideButtonWrap>
-        </Block>
-
-        <Block>
-          <h2>Workshops</h2>
-
-          <article>
-            <h3>How to Hammer Flowers</h3>
-            <time dateTime="2024-01-25T11:00">
-              January 25, 2024 at 11:00 AM
-            </time>
-            <p>
-              Join us for an interactive workshop where you'll learn the art of
-              hammering flowers to create beautiful designs. No prior experience
-              required!
-            </p>
-
-            <CenterButton>
-              {/* <ButtonLink
-                href="https://www.eventbrite.com/e/how-to-hammer-flowers-tickets-793672544947"
-                onClick={() => {
-                  gtag.event({
-                    action: 'click',
-                    category: 'Link',
-                    label: 'Workshops',
-                    value: 1,
-                  });
-
-                  setTimeout(() => {
-                    window.location.href =
-                      'https://www.eventbrite.com/e/how-to-hammer-flowers-tickets-793672544947';
-                  }, 0);
-                }}
-              >
-                Register Now
-              </ButtonLink> */}
-              <i>Sold out</i>
-            </CenterButton>
-          </article>
-
-          <p>
-            Join our mailing list to be notified of future workshops and events!
-          </p>
-
-          <CenterButton>
-            <ButtonLink
-              onClick={() => {
-                gtag.event({
-                  action: 'click',
-                  category: 'Link',
-                  label: 'Workshops',
-                  value: 1,
-                });
-
-                setTimeout(() => {
-                  window.location.href =
-                    // 'https://www.eventbrite.com/o/hammerflower-63675539363#events';
-                    // Mail list
-                    'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
-                }, 0);
-              }}
-              href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop"
-            >
-              Subscribe
-            </ButtonLink>
-          </CenterButton>
         </Block>
 
         {/* <Button
