@@ -186,7 +186,7 @@ function Home() {
           <h2>Workshops</h2>
 
           <article>
-            <h3>Hammering Flowers on Paper</h3>
+            <h3>Basics of hammering flowers on paper</h3>
             <time dateTime="2024-01-25T11:00:00-08:00">
               February 29, 2024 at 11:00 AM PST
             </time>
