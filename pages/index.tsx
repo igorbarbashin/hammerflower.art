@@ -165,6 +165,15 @@ const Disclaimer = styled.div`
   max-width: 30em;
 `;
 
+const Workshop = styled.article`
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+`;
+
+const WokshopButton = styled(CenterButton)`
+  margin-top: 2em;
+`;
+
 /* TODO
 - Upload to youtube as unlisted
 - Add a youtube embed
@@ -185,10 +194,10 @@ function Home() {
         <Block>
           <h2>Workshops</h2>
 
-          <article>
+          <Workshop>
             <h3>Basics of hammering flowers on paper</h3>
-            <time dateTime="2024-01-25T11:00:00-08:00">
-              February 29, 2024 at 11:00 AM PST
+            <time dateTime="2024-02-29T11:00:00-08:00">
+              February 29, 2024 (Thursday) at 11:00 AM PST
             </time>
             <p>
               Join us for an interactive workshop where you'll learn the art of
@@ -196,7 +205,7 @@ function Home() {
               required!
             </p>
 
-            <CenterButton>
+            <WokshopButton>
               <ButtonLink
                 href="https://www.eventbrite.ca/e/845118621547?aff=oddtdtcreator"
                 onClick={() => {
@@ -215,8 +224,41 @@ function Home() {
               >
                 Register Now
               </ButtonLink>
-            </CenterButton>
-          </article>
+            </WokshopButton>
+          </Workshop>
+
+          <Workshop>
+            <h3>Making greeting cards with hammered flowers</h3>
+            <time dateTime="2024-03-7T11:00:00-08:00">
+              March 7, 2024 (Thursday) at 11:00 AM PST
+            </time>
+            <p>
+              Elevate your skills to new heights by learning how to create
+              exquisite, original greeting cards adorned with hammered flower
+              embellishments.
+            </p>
+
+            <WokshopButton>
+              <ButtonLink
+                href="https://www.eventbrite.com/e/making-greeting-cards-with-hammered-flowers-tickets-845357365637"
+                onClick={() => {
+                  gtag.event({
+                    action: 'workshop click',
+                    category: 'Link',
+                    label: 'Workshops',
+                    value: 1,
+                  });
+
+                  setTimeout(() => {
+                    window.location.href =
+                      'https://www.eventbrite.com/e/making-greeting-cards-with-hammered-flowers-tickets-845357365637';
+                  }, 0);
+                }}
+              >
+                Register Now
+              </ButtonLink>
+            </WokshopButton>
+          </Workshop>
 
           <p>
             <a href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop">
