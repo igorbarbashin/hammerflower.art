@@ -1,9 +1,9 @@
-import { globalStyles } from '../lib/globalStyles';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Script from 'next/script';
-import * as gtag from '../lib/gtag';
+import { globalStyles } from "../lib/globalStyles";
+import Head from "next/head";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Script from "next/script";
+import * as gtag from "../lib/gtag";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -11,9 +11,9 @@ const App = ({ Component, pageProps }) => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
-    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
 
@@ -21,6 +21,24 @@ const App = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>HammerFlower</title>
+
+        <meta
+          property="og:image"
+          content="/images/hammerflower-thumbnail.jpg"
+        />
+        <meta property="og:image:width" content="2000" />
+        <meta property="og:image:height" content="1386" />
+        <meta property="og:image:alt" content="Hammerflower logo" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta
+          property="og:image:secure_url"
+          content="/images/hammerflower-thumbnail.jpg"
+        />
+        <meta
+          property="og:image:url"
+          content="/images/hammerflower-thumbnail.jpg"
+        />
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"

@@ -1,5 +1,5 @@
-import { Client } from '@notionhq/client';
-import normalizeFlowers from './normalizeFlowers';
+import { Client } from "@notionhq/client";
+import normalizeFlowers from "./normalizeFlowers";
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -20,7 +20,7 @@ export const getSeason = async (season: string) => {
     filter: {
       or: [
         {
-          property: 'Season',
+          property: "Season",
           select: {
             equals: season,
           },
