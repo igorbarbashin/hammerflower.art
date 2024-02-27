@@ -39,6 +39,12 @@ const App = ({ Component, pageProps }) => {
           content="/images/hammerflower-thumbnail.jpg"
         />
 
+        <meta property="og:title" content="HammerFlower" />
+        <meta
+          property="og:description"
+          content="Discover the art of hammerflower with our engaging tutorials and workshops. Explore the beauty of botanicals through our unique flower hammering techniques."
+        />
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
