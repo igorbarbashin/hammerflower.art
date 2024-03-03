@@ -91,11 +91,12 @@ const Title = styled.h2``;
 const Product = styled.a`
   display: flex;
   width: 100%;
-  padding: 1em;
+  padding: 1em 0;
   color: inherit;
   text-decoration: none;
   font-size: 1.2em;
-  width: 17em;
+  max-width: 17em;
+  /* max-width: 100%; */
   align-items: center;
 `;
 
@@ -163,6 +164,7 @@ const Disclaimer = styled.div`
   font-size: 0.8em;
   font-style: italic;
   max-width: 30em;
+  padding: 1em;
 `;
 
 const Workshop = styled.article`
@@ -192,40 +194,38 @@ function Home() {
 
       <Content>
         <Block>
+          <h2>HammerFlower DIY Kit</h2>
+          <p>
+            Our first batch of HammerFlower DIY Kits has{' '}
+            <strong>sold out</strong>! To ensure you don't miss out on the next
+            batch, please join our mailing list. You'll be the first to know
+            when more kits become available.
+          </p>
+
+          <WokshopButton>
+            <ButtonLink
+              href="https://mailchi.mp/401a05c2dd2d/hammerflower-workshop"
+              onClick={() => {
+                gtag.event({
+                  action: 'kit mail list click',
+                  category: 'Link',
+                  label: 'Kit Mail List',
+                  value: 1,
+                });
+
+                setTimeout(() => {
+                  window.location.href =
+                    'https://mailchi.mp/401a05c2dd2d/hammerflower-workshop';
+                }, 0);
+              }}
+            >
+              Mailing List
+            </ButtonLink>
+          </WokshopButton>
+        </Block>
+
+        <Block>
           <h2>Workshops</h2>
-
-          <Workshop>
-            <h3>Basics of hammering flowers on paper</h3>
-            <time dateTime="2024-02-29T11:00:00-08:00">
-              February 29, 2024 (Thursday) at 11:00 AM PST
-            </time>
-            <p>
-              Join us for an interactive workshop where you'll learn the art of
-              hammering flowers to create beautiful designs. No prior experience
-              required!
-            </p>
-
-            <WokshopButton>
-              <ButtonLink
-                href="https://www.eventbrite.ca/e/845118621547?aff=oddtdtcreator"
-                onClick={() => {
-                  gtag.event({
-                    action: 'workshop click',
-                    category: 'Link',
-                    label: 'Workshops',
-                    value: 1,
-                  });
-
-                  setTimeout(() => {
-                    window.location.href =
-                      'https://www.eventbrite.ca/e/845118621547?aff=oddtdtcreator';
-                  }, 0);
-                }}
-              >
-                Register Now
-              </ButtonLink>
-            </WokshopButton>
-          </Workshop>
 
           <Workshop>
             <h3>Making greeting cards with hammered flowers</h3>
@@ -379,83 +379,82 @@ function Home() {
             Workshops
           </Button>
         </WorkshopsWrap> */}
+        <Block>
+          <Title>Recommended products:</Title>
+          <RecommendedProducts>
+            <Product href="https://amzn.to/3tW0Y8n">
+              <ProductImage src="/images/paper.jpg" />
+              <ProductInfo>
+                Strathmore 140&nbsp;lb Watercolor Paper
+                <AmazonIcon src="/amazon-icon.png" />
+              </ProductInfo>
+            </Product>
+            <Product href="https://amzn.to/3O0oxE9">
+              <ProductImage style={{ padding: 10 }} src="/images/hammer.jpg" />
+              <ProductInfo>
+                Edward Tools Harden 8oz Hammer
+                <AmazonIcon src="/amazon-icon.png" />
+              </ProductInfo>
+            </Product>
+          </RecommendedProducts>
+        </Block>
+
+        {/* <EventList></EventList> */}
+
+        <SocialLinks>
+          <SocialLink
+            target="_blank"
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Social Media',
+                label: 'TikTok',
+                value: 1,
+              });
+            }}
+            href="https://www.tiktok.com/@hammerflower"
+          >
+            <IconTiktok />
+          </SocialLink>
+          <SocialLink
+            target="_blank"
+            href="https://www.instagram.com/hammerflower"
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Social Media',
+                label: 'Instagram',
+                value: 1,
+              });
+            }}
+          >
+            <IconInstagram />
+          </SocialLink>
+          <SocialLink
+            target="_blank"
+            href="https://www.youtube.com/channel/UCb--RJt6k6upXJ3XV6syqtw"
+            onClick={() => {
+              gtag.event({
+                action: 'click',
+                category: 'Social Media',
+                label: 'YouTube',
+                value: 1,
+              });
+            }}
+          >
+            <IconYoutube />
+          </SocialLink>
+        </SocialLinks>
+
+        <Disclaimer>
+          <p>
+            Our website participates in the Amazon Services LLC Associates
+            Program, an affiliate advertising program designed to provide a
+            means for us to earn fees by linking to Amazon.com and affiliated
+            sites, at no extra cost to you.
+          </p>
+        </Disclaimer>
       </Content>
-
-      <Block>
-        <Title>Recommended products:</Title>
-        <RecommendedProducts>
-          <Product href="https://amzn.to/3tW0Y8n">
-            <ProductImage src="/images/paper.jpg" />
-            <ProductInfo>
-              Strathmore 140&nbsp;lb Watercolor Paper
-              <AmazonIcon src="/amazon-icon.png" />
-            </ProductInfo>
-          </Product>
-          <Product href="https://amzn.to/3O0oxE9">
-            <ProductImage style={{ padding: 10 }} src="/images/hammer.jpg" />
-            <ProductInfo>
-              Edward Tools Harden 8oz Hammer
-              <AmazonIcon src="/amazon-icon.png" />
-            </ProductInfo>
-          </Product>
-        </RecommendedProducts>
-      </Block>
-
-      {/* <EventList></EventList> */}
-
-      <SocialLinks>
-        <SocialLink
-          target="_blank"
-          onClick={() => {
-            gtag.event({
-              action: 'click',
-              category: 'Social Media',
-              label: 'TikTok',
-              value: 1,
-            });
-          }}
-          href="https://www.tiktok.com/@hammerflower"
-        >
-          <IconTiktok />
-        </SocialLink>
-        <SocialLink
-          target="_blank"
-          href="https://www.instagram.com/hammerflower"
-          onClick={() => {
-            gtag.event({
-              action: 'click',
-              category: 'Social Media',
-              label: 'Instagram',
-              value: 1,
-            });
-          }}
-        >
-          <IconInstagram />
-        </SocialLink>
-        <SocialLink
-          target="_blank"
-          href="https://www.youtube.com/channel/UCb--RJt6k6upXJ3XV6syqtw"
-          onClick={() => {
-            gtag.event({
-              action: 'click',
-              category: 'Social Media',
-              label: 'YouTube',
-              value: 1,
-            });
-          }}
-        >
-          <IconYoutube />
-        </SocialLink>
-      </SocialLinks>
-
-      <Disclaimer>
-        <p>
-          Our website participates in the Amazon Services LLC Associates
-          Program, an affiliate advertising program designed to provide a means
-          for us to earn fees by linking to Amazon.com and affiliated sites, at
-          no extra cost to you.
-        </p>
-      </Disclaimer>
     </Wrap>
   );
 }

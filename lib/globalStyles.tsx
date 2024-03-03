@@ -20,7 +20,7 @@ export const globalStyles = (
       h2,
       h3,
       h4 {
-        font-family: 'Forum', 'Times New Roman', serif;
+        font-family: 'Mulish', 'Helvetica', 'Arial', sans-serif;
         font-weight: normal;
         margin-top: 0;
       }

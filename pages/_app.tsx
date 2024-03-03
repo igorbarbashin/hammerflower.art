@@ -99,6 +99,10 @@ const App = ({ Component, pageProps }) => {
         crossOrigin="anonymous"
       />
       <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
+        rel="stylesheet"
+      />
+      <link
         href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap"
         rel="stylesheet"
       />
